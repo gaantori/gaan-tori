@@ -1,13 +1,17 @@
-import { AppShell } from '@mantine/core'
+import { AppShell, Header } from '@mantine/core'
 import React from 'react'
 
-type Props = {}
+type Props = {
+  children: React.ReactNode;
+};
 
-function Layout({}: Props) {
+function Layout({ children }: Props) {
   return (
     <div>
-      <AppShell>
-        Hello
+      <AppShell
+      header={<Header height={60} p="xs">Header content</Header>}
+      >
+        {children}
       </AppShell>
     </div>
   )
