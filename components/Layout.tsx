@@ -1,4 +1,4 @@
-import { AppShell, Header } from '@mantine/core'
+import { AppShell, Container, Header } from '@mantine/core'
 import React from 'react'
 
 type Props = {
@@ -9,9 +9,15 @@ function Layout({ children }: Props) {
   return (
     <div>
       <AppShell
-      header={<Header height={60} p="xs">Header content</Header>}
+      header={<Header height={60} p="xs">
+        <Container>
+        Gaan Tori
+        </Container>
+        </Header>}
       >
+        <Container>
         {children}
+        </Container>
       </AppShell>
     </div>
   )
